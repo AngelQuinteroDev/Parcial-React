@@ -26,27 +26,21 @@ import { clsx } from '../lib/clsx.js'
  *   bg       -> 'white' | 'gray' | 'dark'
  */
 export default function Hero({
-  kicker,
   title,
   subtitle,
   primaryAction,
   secondaryAction,
   image,
   badge,
-  bg = 'white',
+  bg = 'gray',
 }) {
   const dark = bg === 'dark'
 
   return (
-    <section className={clsx(dark ? 'bg-slate-900' : 'bg-white')}>
-      <div className="mx-auto grid w-full max-w-7xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:px-8 lg:py-28">
+    <section className={clsx(dark ? 'bg-slate-900' : 'bg-gray')}>
+      <div className="mx-auto grid w-full items-center  sm:px-6 lg:grid-cols-2 ">
         {/* Columna de texto */}
         <div className="animate-fade-in">
-          {kicker && (
-            <p className="text-sm font-semibold uppercase tracking-widest text-primary-500">
-              {kicker}
-            </p>
-          )}
           <h1
             className={clsx(
               'mt-3 text-4xl font-bold tracking-tight sm:text-5xl',
@@ -90,14 +84,14 @@ export default function Hero({
 
         {/* Columna de imagen */}
         {image && (
-          <div className="relative animate-float">
+          <div className="">
             <img
               src={image}
               alt=""
-              className="mx-auto w-full max-w-lg rounded-3xl shadow-float"
+              className=""
             />
             {badge && (
-              <div className="absolute -left-4 top-6 rounded-2xl bg-white px-4 py-2 text-sm font-semibold text-slate-800 shadow-float">
+              <div className="absolute rounded-2xl bg-white text-sm font-semibold text-slate-800 shadow-float">
                 {badge}
               </div>
             )}

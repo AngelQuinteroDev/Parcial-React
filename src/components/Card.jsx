@@ -33,6 +33,7 @@ export default function Card({
   alt = '',
   badge,
   title,
+  title1,
   description,
   children,
   link,
@@ -77,6 +78,7 @@ export default function Card({
             {description}
           </p>
         )}
+          <h3 className="text-lg font-semibold text-slate-900">{title1}</h3>
 
         {children}
 
