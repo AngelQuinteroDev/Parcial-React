@@ -28,11 +28,11 @@ export default function Navbar({ brand = 'MiWeb', links = [], cta, sticky = true
         sticky && 'sticky top-0',
       )}
     >
-      <nav className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        {/* Marca / logo */}
-        <a href="#" className="text-xl font-bold tracking-tight text-slate-900">
-          {brand}
-        </a>
+      <nav className="mx-auto flex h-16 items-center justify-end px-400 sm:px-200 lg:px-10">
+  
+       <a href="#" className="text-xl font-bold sm:px-150">
+        {brand}
+       </a>
 
         {/* Enlaces: escritorio */}
         <ul className="hidden items-center gap-8 md:flex">
@@ -40,7 +40,7 @@ export default function Navbar({ brand = 'MiWeb', links = [], cta, sticky = true
             <li key={link.label}>
               <a
                 href={link.href}
-                className="text-sm font-medium text-slate-600 transition-colors hover:text-primary-600"
+                className="text-sm font-medium text-slate-600 transition-colors px-3 hover:text-primary-600"
               >
                 {link.label}
               </a>

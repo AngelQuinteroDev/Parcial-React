@@ -5,18 +5,10 @@
 // ============================================================
 
 import {
-  Badge,
-  Button,
   Card,
-  Carousel,
-  CTA,
-  Ficha,
-  Footer,
   Hero,
   Navbar,
   Section,
-  Testimonial,
-  Title,
 } from './components'
 
 // Datos de ejemplo (en un proyecto real vendrían de una API)
@@ -94,23 +86,6 @@ const products = [
   },
 ]
 
-const services = [
-  {
-    icon: '⚡',
-    title: 'Rápido',
-    description: 'Vite compila tu código casi al instante con HMR.',
-  },
-  {
-    icon: '🧩',
-    title: 'Reutilizable',
-    description: 'Componentes sueltos que puedes combinar y modificar.',
-  },
-  {
-    icon: '🎨',
-    title: 'Tailwind',
-    description: 'Estilos utilitarios sin escribir CSS desde cero.',
-  },
-]
 
 function App() {
   return (
@@ -150,7 +125,7 @@ function App() {
               badge={product.badge}
               color={product.color}
               title={product.title}
-              description={product.description}
+              description={product.description} 
               title1={product.title1}
             />
           ))}
@@ -162,13 +137,13 @@ function App() {
         title={
           <>
             Una base de componentes para{' '}
-            <span className="text-primary-600">React + Tailwind</span>
+            <span className="text-primary-600 ">React + Tailwind</span>
           </>
         }
         subtitle="Todas las piezas que necesitas para construir una página web tradicional: tarjetas, carruseles, fichas, navbars, footers y más. Copia, pega y personaliza."
         primaryAction={{ label: 'Ver componentes', href: '#servicios' }}
         secondaryAction={{ label: 'Leer docs', href: '#tarjetas' }}
-        image="https://picsum.photos/seed/reactbase/600/500"
+        image="https://picsum.photos/seed/reactbase/600/500" 
       />
       </Section>
     </>
